@@ -20,7 +20,7 @@ forms.forEach(form => {
         console.log('Email submitted:', email);
         
         // Success message
-        this.innerHTML = '<p class="success">Thanks for joining! Check your email.</p>';
+        this.innerHTML = '<p class="success">You"re In! Thank you for your confidence.<br>You will now receive The Mind F*** Letter each</p>';
     });
 });
 
