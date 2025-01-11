@@ -288,12 +288,17 @@
     backdrop-filter: blur(10px);
 }
   nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: #000;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 1rem 2rem;
   }
-
   .nav-brand {
       font-size: 1.2rem;
       letter-spacing: 1px;
