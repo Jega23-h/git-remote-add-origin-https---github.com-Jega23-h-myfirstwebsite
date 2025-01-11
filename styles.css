@@ -287,18 +287,39 @@
     background: rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(10px);
 }
+  nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+  }
+
   .nav-brand {
-      font-size: 2rem;
-      font-weight: 300;
-      letter-spacing: 2px;
-      background: linear-gradient(45deg, #fff, #888);
-      -webkit-background-clip: text;
-      -moz-background-clip: text;
-      -ms-background-clip: text;
-      -o-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+      flex: 0 0 auto;
+  }
+
+  .hamburger {
+      display: none;
       cursor: pointer;
+      margin-left: auto;
+      z-index: 100;
+  }
+
+  .hamburger span {
+      display: block;
+      width: 25px;
+      height: 2px;
+      background: #ffffff;
+      margin: 4px 0;
+      transition: 0.3s;
+  }
+  @media screen and (max-width: 768px) {
+      .nav-brand {
+          font-size: 1.3rem;
+          margin: 0;
+      }
   }
 .nav-links {
     display: flex;
@@ -524,7 +545,7 @@
     font-size: 0.8rem;
     font-weight: bold;
     border-radius: 20px;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .email-box h3 {
@@ -540,10 +561,6 @@
 }
 
 @media screen and (max-width: 768px) {
-    .email-showcase {
-        grid-template-columns: 1fr;
-    }
-
     .story {
         padding: 2rem 1rem;
     }
@@ -824,5 +841,108 @@
         align-items: center;
         gap: 1rem;
         margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .final-section {
+        padding: 2rem 1rem;
+    }
+
+    .final-section h2 {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .transform-button {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .final-cta {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+.final-section h2 {
+        margin-bottom: 2rem;
+}
+    }
+
+    .signup-form {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .signup-form input,
+    .signup-form button {
+        width: 100%;
+        max-width: 300px;
+    }
+
+  .nav-brand {
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+      flex: 0 0 auto;
+  }
+
+  .hamburger {
+      display: none;
+      cursor: pointer;
+      margin-left: auto;
+      z-index: 100;
+  }
+
+  .hamburger span {
+      display: block;
+      width: 25px;
+      height: 2px;
+      background: #ffffff;
+      margin: 4px 0;
+      transition: 0.3s;
+  }
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #000;
+        padding: 1rem;
+    }
+    
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #000;
+        padding: 1rem;
+    }
+    
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
     }
 }
